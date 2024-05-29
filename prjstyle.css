@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0; 
+        padding: 0; 
+        overflow: hidden; 
+    }
+
+    .background-image{
+        background: url("image/dandelion.avif");
+        background-size: cover;
+        background-position: center;
+        opacity:0.5;
+        position: fixed; 
+        width: 100%; 
+        height: 100%;
+    }
+    /*seperate the content and the background-image in different divs, 
+    so the opacity attribute only apply on background-image*/
+    .content{
+        position: relative; 
+        z-index: 1;
+    } 
+
+    .header {
+        padding: 20px;
+        text-align:left;
+        font-size: 25px;
+    }
+
+    /* Create two unequal columns that float next to each other */
+    .column {
+        float: left;
+        padding: 0px 5px 5px 5px;
+        height: 280px; 
+        margin-bottom: 100pax;
+    }
+
+    /* Left column */
+    .column.left {
+        width: 22%;
+    }
+
+    /* 5 buttons that seat in the left column */
+    .button {
+        background-color: #86a7897b;
+        width:100%;
+        border: none;
+        color:black;
+        padding: 10px 100px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 12px;
+        margin:13px 5px 0px 0px;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .button:hover {
+        background-color: #7AB2B2;
+    } 
+
+    /* Right column */
+    .column.right {
+        width: 78%;
+        background-color:#ebf3e8a0;
+        border-radius: 12px;
+        margin:0px 0px 10px 0px;
+    }
+
+    /* 3 image columns in image_gallery page*/
+    .img_column{
+        float: left;
+        height:472px;
+        width:295px;
+        padding-left: 5px;
+        margin: 15px ;
+    }
+
+    .img_title{
+        text-align: center;  
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Style the footer */
+    .footer {
+        text-align: center;
+        font-size: 12px;
+    }
+    /* Responsive layout - makes the three columns stack on top of each
+    other instead of next to each other */
+    @media (max-width: 600px) {
+    .column.side, .column.middle {
+    width: 100%;
+    }
+
+    }
